@@ -30,7 +30,7 @@
 
 ## Qué es
 
-Un programa de entrenamiento en forma de libro gratuito, para quienes construyen cosas y después tienen que lograr que otras personas entiendan, estén de acuerdo y actúen. Treinta y ocho lecciones, noventa y seis prácticas, un plan de treinta días y un sitio con figuras animadas en 3D. Todo en Markdown, en español y en inglés.
+Un programa de entrenamiento en forma de libro gratuito, para quienes construyen cosas y después tienen que lograr que otras personas entiendan, estén de acuerdo y actúen. Treinta y ocho lecciones, noventa y seis prácticas, un plan de treinta días y un sitio con figuras isométricas animadas y una portada en 3D. Todo en Markdown, en español y en inglés.
 
 ## El problema
 
@@ -84,7 +84,7 @@ Veintisiete momentos, cada uno con su capítulo, su herramienta y su práctica, 
 | **13 prompts de entrenamiento** | Pegue uno en cualquier asistente y ensaye contra alguien que insiste |
 | **98 frases y más de 20 plantillas** | Para cuando sus propias palabras no están a mano |
 | **25 recuadros de investigación, 2 mitos a prueba** | Cada uno atado a un estudio publicado, con el punto hasta donde llega |
-| **45 figuras** | Dibujadas en código, animadas, y se pueden girar en 3D |
+| **45 figuras** | Dibujadas en código y animadas; la portada está en 3D |
 
 ## Por qué ahora
 

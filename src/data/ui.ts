@@ -77,12 +77,6 @@ export const ui = {
     licenseHref: "https://creativecommons.org/licenses/by-nc/4.0/",
     footerArt: "Figures after ISO-GLOW (isoglow.dev), with Hairline and Plotter (MIT).",
     footerNote: "2026. Every person and company in this book is invented. AI agents drafted it, directed by the author.",
-    figureView: "Figure view",
-    view3d: "Show this figure in 3D",
-    revolve: "Revolve",
-    revolveTitle: "Turn the figure slowly",
-    isoView: "Iso view",
-    isoTitle: "Back to the isometric view",
     illustration: "Illustration",
   },
   es: {
@@ -158,12 +152,6 @@ export const ui = {
     footerArt: "Figuras según ISO-GLOW (isoglow.dev), con Hairline y Plotter (MIT).",
     footerNote:
       "2026. Todas las personas y empresas de este libro son inventadas. Lo redactaron y tradujeron agentes de IA, dirigidos por el autor.",
-    figureView: "Vista de la figura",
-    view3d: "Ver esta figura en 3D",
-    revolve: "Girar",
-    revolveTitle: "Girar la figura despacio",
-    isoView: "Vista iso",
-    isoTitle: "Volver a la vista isométrica",
     illustration: "Ilustración",
   },
 }

@@ -1,7 +1,7 @@
 ---
 // A book figure (art/SKILL.md). The server renders its designed still as an
 // inline SVG, so it reads without JavaScript; the client then runs its loop,
-// lets it answer the pointer, and can turn it into a 3D scene.
+// lets it answer the pointer, and shows it as a 3D scene when mode is "3d".
 import { strings, type Lang } from "@/data/ui"
 import { renderToString } from "@/lib/iso/svg.js"
 
@@ -13,7 +13,7 @@ interface Props {
   class?: string
   /** "3d" starts in the 3D view when the browser allows it. */
   mode?: "2d" | "3d"
-  /** Plate, read-out and the 3D buttons. */
+  /** Plate and read-out. */
   controls?: boolean
   /** The name on the plate. Defaults to the figure's own. */
   plate?: string
@@ -41,31 +41,18 @@ const svg = fig ? renderToString(fig, { prefix, ...words }) : null
     <figure class:list={["iso-figure", className]} data-slug={slug} data-mode={mode} data-prefix={prefix} data-view="2d">
       <div class="iso-stage iso" set:html={svg} />
       {controls && (
-        <>
-          <div class="iso-tools" role="group" aria-label={t.figureView}>
-            <button type="button" data-act="3d" aria-pressed="false" title={t.view3d}>
-              3D
-            </button>
-            <button type="button" data-act="revolve" aria-pressed="false" title={t.revolveTitle}>
-              {t.revolve}
-            </button>
-            <button type="button" data-act="iso" title={t.isoTitle}>
-              {t.isoView}
-            </button>
-          </div>
-          <figcaption class="iso-bar">
-            <span class="iso-plate">
-              <i aria-hidden="true" />
-              {number && <span class="iso-num">{number}</span>}
-              {plateName}
+        <figcaption class="iso-bar">
+          <span class="iso-plate">
+            <i aria-hidden="true" />
+            {number && <span class="iso-num">{number}</span>}
+            {plateName}
+          </span>
+          {lang === "en" && (
+            <span class="iso-readout" aria-live="polite">
+              rest
             </span>
-            {lang === "en" && (
-              <span class="iso-readout" aria-live="polite">
-                rest
-              </span>
-            )}
-          </figcaption>
-        </>
+          )}
+        </figcaption>
       )}
     </figure>
   ) : (

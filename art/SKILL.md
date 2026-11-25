@@ -139,5 +139,5 @@ Tokens live in `src/lib/iso/style.js`. Light faces are near white with grey line
 - `src/lib/iso/webgl.js`: the 3D renderer (three.js), loaded only when a figure goes 3D.
 - `src/lib/iso/runtime.js`: the animation loop (pauses off screen, respects reduced motion).
 - `src/lib/iso/style.js`: tokens and classes for the site and for standalone files.
-- `src/components/Figure.astro`: the figure on a page, with its plate, read-out and 3D buttons.
+- `src/components/Figure.astro`: the figure on a page, with its plate and read-out. The cover starts in 3D (`mode="3d"`); there are no view buttons.
 - `scripts/look.mjs`: checks and contact sheet. `scripts/export-art.mjs`: static SVGs. `scripts/build-logo.mjs`: the logo files.

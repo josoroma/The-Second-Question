@@ -30,7 +30,7 @@
 
 ## What it is
 
-A training program in the form of a free book, for people who build things and then have to get other people to understand, agree and act. Thirty-eight lessons, ninety-six practices, a thirty-day plan, and a website with animated 3D figures. Everything is plain Markdown, in English and Spanish.
+A training program in the form of a free book, for people who build things and then have to get other people to understand, agree and act. Thirty-eight lessons, ninety-six practices, a thirty-day plan, and a website with animated isometric figures and a 3D cover. Everything is plain Markdown, in English and Spanish.
 
 ## The problem
 
@@ -84,7 +84,7 @@ Twenty-seven moments, each with its chapter, its tool and its practice, are in [
 | **13 sparring prompts** | Paste one into any assistant and rehearse against someone who pushes back |
 | **98 phrases and 20-odd templates** | For the moment when your own words are not close enough |
 | **25 research callouts, 2 myth checks** | Each tied to a published study, with the place where it stops |
-| **45 figures** | Drawn in code, animated, and turnable in 3D |
+| **45 figures** | Drawn in code and animated; the cover is in 3D |
 
 ## Why now
 
@@ -126,7 +126,7 @@ The book and its figures are [CC BY-NC 4.0](https://creativecommons.org/licenses
 
 The site is built with [Astro](https://astro.build) and the [shadcn/ui](https://ui.shadcn.com) "Luma" preset, with light and dark modes and two languages: English at the root, Spanish under `/es/`.
 
-The figures are isometric drawings written as code in `src/figures/`, on a small engine in `src/lib/iso/`. Each one is drawn two ways from one description: a fine-line SVG that runs its own loop and answers the pointer, and a three.js scene you can turn (the **3D** button). The style follows [ISO-GLOW](https://isoglow.dev) (MIT): fine lines on opaque faces, and whatever is switched on glows. Solids are built the way [Hairline](https://hairline.lucasmarkes.com) (MIT) builds them, and the motion and checks follow [Plotter](https://github.com/pasqualevitiello/plotter) (MIT). The accents are josoroma magenta and teal.
+The figures are isometric drawings written as code in `src/figures/`, on a small engine in `src/lib/iso/`. Each one is drawn two ways from one description: a fine-line SVG that runs its own loop and answers the pointer, and a three.js scene, which the cover uses. The style follows [ISO-GLOW](https://isoglow.dev) (MIT): fine lines on opaque faces, and whatever is switched on glows. Solids are built the way [Hairline](https://hairline.lucasmarkes.com) (MIT) builds them, and the motion and checks follow [Plotter](https://github.com/pasqualevitiello/plotter) (MIT). The accents are josoroma magenta and teal.
 
 ```bash
 npm install
