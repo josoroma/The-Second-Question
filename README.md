@@ -116,6 +116,10 @@ AI agents drafted the book in November 2026, working from the author's brief and
 
 Made in Costa Rica.
 
+## License
+
+The book and its figures are [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/): share and adapt them for noncommercial purposes, with credit. The code is [MIT](LICENSES/MIT.txt). The logos are all rights reserved. Details in [LICENSE.md](LICENSE.md).
+
 ---
 
 ## For developers

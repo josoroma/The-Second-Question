@@ -116,4 +116,8 @@ Agentes de IA redactaron el libro en noviembre de 2026, a partir del encargo del
 
 Hecho en Costa Rica.
 
+## Licencia
+
+El libro y sus figuras son [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.es): puede compartirlos y adaptarlos sin fines comerciales, con crédito. El código es [MIT](LICENSES/MIT.txt). Los logos, todos los derechos reservados. Los detalles están en [LICENSE.md](LICENSE.md).
+
 La parte técnica (el sitio, las figuras y cómo correrlo) está en el [README en inglés](README.md#for-developers).

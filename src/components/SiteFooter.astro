@@ -18,11 +18,17 @@ const t = strings(lang)
     <BrandLockup lang={lang} size="sm" idSuffix="footer" />
     <div class="flex flex-col gap-1 sm:items-end sm:text-right">
       <p>
-        {t.footerSource}
+        {t.footerSource}{" "}
         <a href={repo} class="text-foreground underline underline-offset-4">{t.footerLink}</a>.
       </p>
       <p>{t.footerNote}</p>
       <p>{t.footerArt}</p>
+      <p>
+        {t.licenseBook}{" "}
+        <a href={t.licenseHref} rel="license" class="text-foreground underline underline-offset-4">CC BY-NC 4.0</a>.{" "}
+        {t.licenseCode}{" "}
+        <a href={`${repo}/blob/main/LICENSE.md`} class="text-foreground underline underline-offset-4">MIT</a>.
+      </p>
     </div>
   </div>
 </footer>
