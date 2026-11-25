@@ -1,0 +1,48 @@
+# Las herramientas del libro
+
+Cada entrada se enseña en el capítulo que aparece en cursiva.
+
+- **Pedido.** Lo que usted quiere de quien escucha, con una fecha si la tiene. *Empiece aquí*.
+- **Línea base.** Sesenta segundos sobre en qué está trabajando y por qué importa, grabados y comparados solo con su propia grabación siguiente. *Empiece aquí*. Cinco revisiones:
+  - *Frases antes del punto.* Cuántas vienen antes de la primera que dice por qué importa su trabajo.
+  - *Reservas sin base.* Cada *probablemente*, *creo que*, *debería* u *ojalá* sin nada después que diga por qué.
+  - *Un ejemplo.* Un caso concreto que muestra por qué importa; los antecedentes no cuentan.
+  - *El cierre.* Un pedido o un próximo paso al final.
+  - *Dicho de vuelta.* Una persona lo oye una sola vez y escribe en una frase el punto de usted.
+- **Palabras de base.** Cómo sabe usted lo que afirma, de la más fuerte a la más débil. *¿Qué tanta seguridad tiene? Dígalo*.
+  - *Comprobado.* Yo lo corrí, o yo leí el registro.
+  - *Recibido.* Me lo dijo una persona, un documento o una máquina.
+  - *Razonado.* Lo deduje de cosas comprobadas o recibidas.
+  - *Supuesto.* Lo estoy dando por sentado.
+- **Restricción.** El paso que marca el ritmo del conjunto. *Ver el sistema*.
+- **Listo significa.** Lo que otra persona podría comprobar una vez hecha la práctica.
+- **Grados.** Qué tan firme es un pronóstico. *Ingeniería y arquitectura*.
+  - *Duradero.* Se sostuvo en cambios anteriores y se apoya en algo más que testimonios.
+  - *Apuesta razonable.* Buen razonamiento, evidencia escasa.
+  - *Abierto.* Nadie lo sabe todavía; la casilla dice en qué fijarse.
+- **Límite.** Hasta dónde llega la afirmación, qué no se ha comprobado y qué la cambiaría. *¿Qué tanta seguridad tiene? Dígalo*.
+- **Boceto de quien escucha.** Tres líneas sobre una persona con nombre, antes de un mensaje: qué sabe ya, qué tiene que decidir y qué puede perder. Compruébelo con una pregunta. *Quién escucha*.
+- **Ciclo.** Un efecto que regresa a su propia causa. Un ciclo de refuerzo se alimenta a sí mismo; un ciclo de equilibrio empuja en contra. *Ver el sistema*.
+- **Orden de la siguiente pregunta.** Empiece con la frase del punto; después de cada frase, responda lo que esta persona preguntaría enseguida; pare cuando la siguiente pregunta le toque hacerla a ella. *Dele una forma*.
+- **Versión observable.** Para cualquier etiqueta, lo que mostraría una grabación o lo que diría un número. *La palabra exacta*.
+- **Punto.** Lo que esta persona debería creer o hacer. Usted tiene uno cuando alguien podría responderle que no. *Sepa lo que piensa*.
+- **Frase del punto.** Una frase, antes de cualquier línea que vaya a leer otra persona: `[esta persona] debería [creer o hacer esto], porque [la única razón]`. *Sepa lo que piensa*.
+- **Hoja de preparación.** Una página antes de cualquier negociación, que termina en una prueba: ¿las dos partes van a seguir cumpliendo esto cuando el trabajo ya haya empezado? *Negociación*.
+- **Confirmación de vuelta.** Lo que entendí, lo que voy a hacer, lo que no tengo claro. *Una escucha que se siente*.
+- **Etiquetas de los capítulos por rol.** En qué se apoya lo que se dice. *Ingeniería y arquitectura*.
+  - *Reportado.* Lo dicen personas del oficio, muchas de las cuales venden las herramientas.
+  - *Comprobado.* Lo respalda un hallazgo publicado.
+  - *Nuestra apuesta.* El razonamiento de este libro.
+- **Dicho de vuelta.** Vea la línea base.
+- **Efectos de segundo orden.** Lo que un cambio desencadena después de su primer efecto, y que a menudo sienten personas que no estaban en la reunión. *Ver el sistema*.
+- **Prueba de la segunda pregunta.** Cinco preguntas para cualquier afirmación, suya, de un colega o de una máquina. *¿Cuál es el punto? ¿En qué se apoya? ¿Hasta dónde llega? ¿Qué quiere de mí? ¿Quién responde por esto?* *Empiece aquí*; *¿Qué tanta seguridad tiene? Dígalo*.
+- **Afirmación a la medida.** La afirmación, su base, su límite. *¿Qué tanta seguridad tiene? Dígalo*.
+- **Clasifique primero.** Antes de responder o discutir, decida de qué tipo de cosa se trata, para saber qué la resolvería. Una pregunta es un hecho, un juicio, un compromiso o un desafío; un desacuerdo es sobre qué es verdad, qué hacer o a quién le toca algo limitado. *Pensar sobre la marcha*; *Discutir bien*.
+- **Tipos de pensador.** Seis hábitos, nunca personalidades. *A quién le va bien ahora*.
+  - *Quien enmarca* decide cuál es la pregunta antes de que alguien la responda.
+  - *Quien calibra* dice qué tanta seguridad tenemos y pone a prueba una afirmación antes de que el equipo actúe con base en ella.
+  - *Quien lee el sistema* pregunta qué desencadena un cambio después de su primer efecto y quién lo siente después.
+  - *Quien traza la estrategia* elige entre caminos cuando nadie sabe la respuesta y dice qué cambiaría la elección.
+  - *Quien resuelve* toma un enredo con gente adentro y lo lleva a una decisión que dura.
+  - *Quien traduce* lleva el significado intacto al otro lado de una frontera.
+- **Historia de trabajo.** Se construye hacia atrás, desde lo que tiene que decidir quien escucha: la decisión, que se escribe primero y nunca se cuenta primero; un momento; la cuenta; la entrega. *Historias para quienes piensan en sistemas*.

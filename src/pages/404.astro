@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/main.astro"
+import { buttonVariants } from "@/components/ui/button"
+import { homeHref } from "@/data/book"
+---
+
+<Layout title="Page not found">
+  <section class="mx-auto flex max-w-xl flex-col items-start gap-5 px-4 py-28 sm:px-6">
+    <p class="text-sm text-muted-foreground">404</p>
+    <h1 class="text-4xl font-semibold tracking-tight">That page is not in the book.</h1>
+    <p class="text-lg leading-relaxed text-muted-foreground">
+      The link may have moved. The contents list every chapter.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <a href={`${homeHref("en")}#contents`} class={buttonVariants({ size: "lg" })}>Go to the contents</a>
+      <a
+        href={`${homeHref("es")}#contents`}
+        lang="es"
+        hreflang="es"
+        class={buttonVariants({ size: "lg", variant: "outline" })}
+      >
+        Ir al contenido en español
+      </a>
+    </div>
+  </section>
+</Layout>

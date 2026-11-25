@@ -1,0 +1,63 @@
+---
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Github01Icon } from "@hugeicons/core-free-icons"
+
+import BrandLockup from "@/components/BrandLockup.astro"
+import { MobileNav } from "@/components/MobileNav"
+import { ThemeToggle } from "@/components/ThemeToggle"
+import { homeHref, repo } from "@/data/book"
+import { strings, type Lang } from "@/data/ui"
+import { navGroups } from "@/lib/chapters"
+
+interface Props {
+  current?: string
+  lang: Lang
+  /** This page in the other language. */
+  otherHref: string
+}
+
+const { current, lang, otherHref } = Astro.props
+const t = strings(lang)
+const groups = await navGroups(lang)
+---
+
+<header
+  class="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/65"
+>
+  <div class="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4 sm:px-6">
+    <MobileNav
+      client:idle
+      groups={groups}
+      current={current}
+      homeHref={homeHref(lang)}
+      labels={{ contents: t.contents, open: t.openContents, title: t.title, preview: t.preview }}
+    />
+    <BrandLockup lang={lang} size="md" idSuffix="header" class="min-w-0 flex-1" />
+    <nav class="flex shrink-0 items-center gap-1">
+      <a
+        href={otherHref}
+        hreflang={lang === "es" ? "en" : "es"}
+        lang={lang === "es" ? "en" : "es"}
+        class="inline-flex h-9 items-center justify-center rounded-4xl px-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+        aria-label={t.otherLang}
+        title={t.otherLang}
+      >
+        {t.otherShort}
+      </a>
+      <a
+        href={`${homeHref(lang)}#contents`}
+        class="hidden rounded-4xl px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground sm:block"
+      >
+        {t.contents}
+      </a>
+      <a
+        href={repo}
+        class="inline-flex size-9 items-center justify-center rounded-4xl text-foreground transition-colors hover:bg-muted"
+        aria-label={t.source}
+      >
+        <HugeiconsIcon icon={Github01Icon} strokeWidth={2} className="size-4" />
+      </a>
+      <ThemeToggle client:load label={t.theme} />
+    </nav>
+  </div>
+</header>

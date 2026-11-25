@@ -1,0 +1,28 @@
+---
+import BrandLockup from "@/components/BrandLockup.astro"
+import { repo } from "@/data/book"
+import { strings, type Lang } from "@/data/ui"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = strings(lang)
+---
+
+<footer class="mt-24 border-t border-border/70">
+  <div
+    class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6"
+  >
+    <BrandLockup lang={lang} size="sm" idSuffix="footer" />
+    <div class="flex flex-col gap-1 sm:items-end sm:text-right">
+      <p>
+        {t.footerSource}
+        <a href={repo} class="text-foreground underline underline-offset-4">{t.footerLink}</a>.
+      </p>
+      <p>{t.footerNote}</p>
+      <p>{t.footerArt}</p>
+    </div>
+  </div>
+</footer>

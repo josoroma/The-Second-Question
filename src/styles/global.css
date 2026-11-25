@@ -1,0 +1,515 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Geist Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.488 0.243 264.376);
+    --primary-foreground: oklch(0.97 0.014 254.604);
+    --secondary: oklch(0.967 0.001 286.375);
+    --secondary-foreground: oklch(0.21 0.006 285.885);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.845 0.143 164.978);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.596 0.145 163.225);
+    --chart-4: oklch(0.508 0.118 165.612);
+    --chart-5: oklch(0.432 0.095 166.913);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.546 0.245 262.881);
+    --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.424 0.199 265.638);
+    --primary-foreground: oklch(0.97 0.014 254.604);
+    --secondary: oklch(0.274 0.006 286.033);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.845 0.143 164.978);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.596 0.145 163.225);
+    --chart-4: oklch(0.508 0.118 165.612);
+    --chart-5: oklch(0.432 0.095 166.913);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.623 0.214 259.815);
+    --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+/* ---------------------------------------------------------------------------
+   The Second Question: book styles
+   --------------------------------------------------------------------------- */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 22%, transparent);
+  }
+}
+
+@layer components {
+  /* Inline brand marks */
+  .brand-svg svg {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+  .dark .josoroma-logo {
+    --josoroma-primary: #e3487c;
+    --josoroma-accent: #1fa3cf;
+  }
+
+  /* Book figures (art/SKILL.md): a panel, the live drawing, a plate below */
+  .iso-figure {
+    position: relative;
+    margin: 0;
+  }
+  .iso-stage {
+    position: relative;
+    aspect-ratio: 560 / 440;
+    border-radius: 1.5rem;
+    background: var(--iso-panel);
+    border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+    overflow: hidden;
+  }
+  .iso-stage > svg,
+  .iso-stage > canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .iso-figure[data-live] .iso-stage > svg {
+    cursor: crosshair;
+  }
+  .iso-stage > canvas {
+    cursor: grab;
+  }
+  .iso-stage > canvas:active {
+    cursor: grabbing;
+  }
+  .iso-tools {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    display: flex;
+    gap: 0.375rem;
+  }
+  .iso-tools button {
+    font: 500 10.5px/1 var(--font-mono);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: color-mix(in oklab, var(--background) 80%, transparent);
+    color: var(--muted-foreground);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition:
+      color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
+  .iso-tools button:hover {
+    color: var(--foreground);
+  }
+  .iso-tools button[aria-pressed="true"] {
+    color: var(--foreground);
+    border-color: color-mix(in oklab, var(--iso-accent) 55%, var(--border));
+    box-shadow: 0 0 10px -2px color-mix(in oklab, var(--iso-accent) 55%, transparent);
+  }
+  .iso-tools button:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  .iso-tools button[disabled] {
+    display: none;
+  }
+  .iso-figure:not([data-view="3d"]) .iso-tools [data-act="iso"] {
+    display: none;
+  }
+  .iso-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    margin-top: 0.7rem;
+    padding: 0 0.35rem;
+    font: 500 10.5px/1.5 var(--font-mono);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+  .iso-plate i {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 0.6rem;
+    border-radius: 50%;
+    vertical-align: 1px;
+    background: var(--iso-accent);
+    box-shadow: 0 0 8px var(--iso-accent);
+  }
+  .iso-num {
+    margin-right: 0.6rem;
+    color: var(--foreground);
+  }
+  .iso-readout {
+    color: var(--foreground);
+    text-transform: none;
+    letter-spacing: 0.05em;
+  }
+  .iso-figure.iso-missing .iso-stage {
+    background: repeating-linear-gradient(135deg, transparent 0 10px, color-mix(in oklab, var(--border) 50%, transparent) 10px 11px);
+  }
+
+  /* Long-form reading */
+  .book-prose {
+    font-size: 1.0625rem;
+    line-height: 1.78;
+    color: var(--foreground);
+    max-width: 68ch;
+  }
+  @media (min-width: 640px) {
+    .book-prose {
+      font-size: 1.125rem;
+    }
+  }
+  .book-prose > * + * {
+    margin-top: 1.25em;
+  }
+  .book-prose h2 {
+    margin-top: 2.6em;
+    font-size: 1.6em;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    scroll-margin-top: 6rem;
+  }
+  .book-prose h3 {
+    margin-top: 2em;
+    font-size: 1.22em;
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 6rem;
+  }
+  .book-prose h4 {
+    margin-top: 1.6em;
+    font-weight: 600;
+  }
+  .book-prose h2 + *,
+  .book-prose h3 + *,
+  .book-prose h4 + * {
+    margin-top: 0.6em;
+  }
+  .book-prose strong {
+    font-weight: 600;
+  }
+  .book-prose a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .dark .book-prose a {
+    color: var(--sidebar-primary);
+  }
+  .book-prose ul,
+  .book-prose ol {
+    padding-left: 1.4em;
+  }
+  .book-prose ul {
+    list-style: disc;
+  }
+  .book-prose ol {
+    list-style: decimal;
+  }
+  .book-prose li + li {
+    margin-top: 0.45em;
+  }
+  .book-prose li::marker {
+    color: var(--muted-foreground);
+  }
+  .book-prose hr {
+    margin: 3em auto;
+    width: 6rem;
+    border-color: var(--border);
+  }
+  .book-prose code {
+    font-size: 0.88em;
+    background: var(--muted);
+    border-radius: calc(var(--radius) * 0.6);
+    padding: 0.12em 0.4em;
+  }
+  .book-prose pre {
+    font-size: 0.85em;
+    line-height: 1.65;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) * 1.8);
+    padding: 1.1em 1.3em;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  .book-prose pre code {
+    background: none;
+    padding: 0;
+  }
+  .book-prose table {
+    width: 100%;
+    font-size: 0.9em;
+    line-height: 1.55;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+  }
+  .book-prose th {
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    padding: 0.6em 0.8em;
+    vertical-align: bottom;
+  }
+  .book-prose td {
+    border-bottom: 1px solid var(--border);
+    padding: 0.6em 0.8em;
+    vertical-align: top;
+  }
+  /* Phones: each row becomes a small card, each cell labelled by its column */
+  @media (max-width: 639px) {
+    .book-prose table,
+    .book-prose tbody,
+    .book-prose tr,
+    .book-prose td {
+      display: block;
+    }
+    .book-prose thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+    .book-prose tr {
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) * 1.6);
+      padding: 0.5em 1em;
+    }
+    .book-prose tr + tr {
+      margin-top: 0.75em;
+    }
+    .book-prose td {
+      border: 0;
+      padding: 0.4em 0;
+    }
+    .book-prose td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 0.1em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted-foreground);
+    }
+  }
+
+  /* Dialogue and ordinary quotations */
+  .book-prose blockquote {
+    border-left: 2px solid var(--border);
+    padding-left: 1.1em;
+    color: color-mix(in oklab, var(--foreground) 86%, transparent);
+  }
+  .book-prose blockquote > * + * {
+    margin-top: 0.8em;
+  }
+
+  /* The book's callouts */
+  .book-prose blockquote[data-callout] {
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) * 1.8);
+    padding: 1.1em 1.3em;
+    color: var(--foreground);
+    font-size: 0.95em;
+    line-height: 1.7;
+  }
+  .book-prose blockquote[data-callout] strong[data-callout-label] {
+    display: block;
+    width: fit-content;
+    margin-bottom: 0.45em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .book-prose blockquote[data-callout="research"] {
+    background: color-mix(in oklab, var(--primary) 6%, var(--background));
+    border-color: color-mix(in oklab, var(--primary) 28%, var(--border));
+  }
+  .book-prose blockquote[data-callout="research"] strong[data-callout-label] {
+    color: var(--primary);
+  }
+  .dark .book-prose blockquote[data-callout="research"] strong[data-callout-label] {
+    color: var(--sidebar-primary);
+  }
+  .book-prose blockquote[data-callout="myth"] {
+    background: color-mix(in oklab, var(--destructive) 6%, var(--background));
+    border-color: color-mix(in oklab, var(--destructive) 26%, var(--border));
+  }
+  .book-prose blockquote[data-callout="myth"] strong[data-callout-label] {
+    color: var(--destructive);
+  }
+  .book-prose blockquote[data-callout="practice"] {
+    background: var(--muted);
+  }
+  .book-prose blockquote[data-callout="practice"] strong[data-callout-label] {
+    color: var(--muted-foreground);
+  }
+  .book-prose blockquote[data-callout="line"] {
+    border: 0;
+    border-left: 3px solid var(--primary);
+    border-radius: 0;
+    background: none;
+    padding: 0.2em 0 0.2em 1.2em;
+    margin-top: 2.2em;
+    margin-bottom: 2.2em;
+    font-size: 1.35em;
+    line-height: 1.45;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+  .book-prose blockquote[data-callout="line"] strong[data-callout-label] {
+    color: var(--muted-foreground);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Device headings */
+  .book-prose [data-device] {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+  .book-prose [data-device]::before {
+    content: "";
+    flex: none;
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 999px;
+    border: 1.5px solid var(--primary);
+  }
+  .book-prose [data-device="practice"]::before {
+    background: var(--primary);
+  }
+
+  /* On dark, the brighter blue keeps the accents visible */
+  .dark .book-prose [data-device]::before {
+    border-color: var(--sidebar-primary);
+  }
+  .dark .book-prose [data-device="practice"]::before {
+    background: var(--sidebar-primary);
+  }
+  .dark .book-prose blockquote[data-callout="line"] {
+    border-left-color: var(--sidebar-primary);
+  }
+}

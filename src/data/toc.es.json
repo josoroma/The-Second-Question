@@ -1,0 +1,305 @@
+{
+  "parts": [
+    {
+      "number": 1,
+      "title": "Mente clara",
+      "blurb": "Encuentre el punto antes de hablar, sepa para quién es, dele una forma, elija la palabra exacta y diga qué tanta seguridad tiene.",
+      "art": "part-1-clear-head",
+      "chapters": [
+        {
+          "number": 1,
+          "slug": "01-start-here",
+          "title": "Empiece aquí",
+          "summary": "En diez minutos oye lo que un solo movimiento hace con sesenta segundos de lo que usted dice, y ve por qué ese movimiento vale más ahora que las máquinas escriben el primer borrador."
+        },
+        {
+          "number": 2,
+          "slug": "02-know-what-you-think",
+          "title": "Sepa lo que piensa",
+          "summary": "Encuentra su punto antes de la reunión, escribiendo o conversándolo, y lo pone a prueba antes de que lo haga otra persona."
+        },
+        {
+          "number": 3,
+          "slug": "03-who-is-listening",
+          "title": "Quién escucha",
+          "summary": "En dos minutos hace el boceto de la única persona a la que tiene que llegar, qué sabe, qué tiene que decidir y qué puede perder, y deja de explicarle al público equivocado."
+        },
+        {
+          "number": 4,
+          "slug": "04-give-it-a-shape",
+          "title": "Dele una forma",
+          "summary": "Sus respuestas, explicaciones y avances son fáciles de seguir porque cada frase responde la pregunta que abrió la anterior."
+        },
+        {
+          "number": 5,
+          "slug": "05-the-exact-word",
+          "title": "La palabra exacta",
+          "summary": "Cambia las etiquetas que causan la mayoría de los malentendidos en el trabajo por lo que alguien vería, oiría o contaría, en su primera lengua o en la segunda."
+        },
+        {
+          "number": 6,
+          "slug": "06-how-sure-are-you",
+          "title": "¿Qué tanta seguridad tiene? Dígalo",
+          "summary": "Dice cualquier afirmación, estimación o “no sé” en el tamaño que su evidencia respalda, y pone a prueba de la misma manera la afirmación de un colega o la de una máquina."
+        }
+      ],
+      "machine": {
+        "slug": "06m-with-a-machine-in-the-room",
+        "title": "Con una máquina en la sala",
+        "summary": "Encontrar el punto y darle a una afirmación su tamaño cuando un asistente o un agente es parte del trabajo. Después grabe otra vez sus sesenta segundos."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Voz clara",
+      "blurb": "Diga menos, sea fácil de oír, use la voz, el cuerpo y la cámara a propósito, mantenga la serenidad bajo presión y piense sobre la marcha.",
+      "art": "part-2-clear-voice",
+      "chapters": [
+        {
+          "number": 7,
+          "slug": "07-say-less",
+          "title": "Diga menos",
+          "summary": "Se detiene cuando el punto ya está dicho: sin disculpa por delante, sin tercera explicación y con una pausa que usted eligió."
+        },
+        {
+          "number": 8,
+          "slug": "08-easy-to-hear",
+          "title": "Fácil de oír",
+          "summary": "Cinco minutos al día hacen que sea más fácil entenderle en una llamada, con el acento que tiene."
+        },
+        {
+          "number": 9,
+          "slug": "09-voice-body-and-camera",
+          "title": "Voz, cuerpo y cámara",
+          "summary": "Sabe lo que hacen su voz, su cara y su cámara en una sala y en una llamada, y lo poco que puede decirle una sola señal de otra persona."
+        },
+        {
+          "number": 10,
+          "slug": "10-steady-under-pressure",
+          "title": "Serenidad bajo presión",
+          "summary": "Tiene una rutina para los diez minutos antes de un momento difícil y un camino de regreso cuando pierde el hilo."
+        },
+        {
+          "number": 11,
+          "slug": "11-thinking-on-your-feet",
+          "title": "Pensar sobre la marcha",
+          "summary": "Gana dos segundos, clasifica la pregunta y responde la que le hicieron, incluidas la hostil y la interrupción."
+        }
+      ],
+      "machine": {
+        "slug": "11m-with-a-machine-in-the-room",
+        "title": "Con una máquina en la sala",
+        "summary": "Decir menos y mantener la serenidad cuando un asistente o un agente es parte del trabajo. Después grabe otra vez."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Conexión clara",
+      "blurb": "Haga que la gente sienta que la escuchan, convierta la charla ligera en conversación de verdad y lleve un solo punto en una historia.",
+      "art": "part-3-clear-connection",
+      "chapters": [
+        {
+          "number": 12,
+          "slug": "12-listening-people-can-feel",
+          "title": "Una escucha que se siente",
+          "summary": "La otra persona sabe que la escucharon, porque usted se lo dijo de vuelta y ella le corrigió."
+        },
+        {
+          "number": 13,
+          "slug": "13-questions-and-common-ground",
+          "title": "Preguntas y terreno común",
+          "summary": "Puede empezar una conversación de verdad con alguien que no conoce, con un cliente o con alguien de la alta dirección, encontrar lo que comparten y cerrarla bien."
+        },
+        {
+          "number": 14,
+          "slug": "14-story-for-people-who-think-in-systems",
+          "title": "Historias para quienes piensan en sistemas",
+          "summary": "Lleva un solo punto en una historia de noventa segundos, hecha con un momento real y la cuenta que muestra que no es un caso aislado, y sabe cuándo una historia es la respuesta equivocada."
+        }
+      ],
+      "machine": {
+        "slug": "14m-with-a-machine-in-the-room",
+        "title": "Con una máquina en la sala",
+        "summary": "La escucha, las preguntas y las historias cuando un asistente o un agente es parte del trabajo. Después grabe otra vez."
+      }
+    },
+    {
+      "number": 4,
+      "title": "Las salas",
+      "blurb": "Lleve las herramientas a la reunión, la explicación, el avance, la presentación, la demo, el pitch, la venta, el encargo, la página y la llamada entre fronteras.",
+      "art": "part-4-the-rooms",
+      "chapters": [
+        {
+          "number": 15,
+          "slug": "15-the-meeting",
+          "title": "La reunión",
+          "summary": "Consigue la palabra, conduce hacia una decisión y sale con un responsable y una fecha, en reuniones diarias, planificaciones, revisiones y retrospectivas."
+        },
+        {
+          "number": 16,
+          "slug": "16-the-explanation",
+          "title": "La explicación",
+          "summary": "Una persona que tiene que decidir puede seguir su disyuntiva, su arquitectura o su incertidumbre sin tener su formación."
+        },
+        {
+          "number": 17,
+          "slug": "17-the-update",
+          "title": "El avance",
+          "summary": "Su estado, sus malas noticias y su escalamiento llegan con la respuesta primero y con una fecha que dice de qué depende, y su inversionista se entera primero por usted."
+        },
+        {
+          "number": 18,
+          "slug": "18-the-presentation",
+          "title": "La presentación",
+          "summary": "Su charla abre con algo que vale la pena oír, no pierde a la gente a la mitad, cierra con un pedido claro y sobrevive a las preguntas, en la sala o en una pantalla."
+        },
+        {
+          "number": 19,
+          "slug": "19-the-demo",
+          "title": "La demo",
+          "summary": "La gente ve el valor en los primeros dos minutos, y cuando la demo se cae en vivo usted sabe qué decir después."
+        },
+        {
+          "number": 20,
+          "slug": "20-the-pitch",
+          "title": "El pitch",
+          "summary": "Puede decir en una frase lo que hace su empresa o su proyecto, y ajustarla a un inversionista, a una persona que quiere contratar y a quien maneja un presupuesto dentro de la empresa."
+        },
+        {
+          "number": 21,
+          "slug": "21-the-sale",
+          "title": "La venta",
+          "summary": "Puede llevar una llamada de descubrimiento, escribir una propuesta que quien compra pueda comprobar, atender la objeción y decir el precio sin titubear ni disculparse."
+        },
+        {
+          "number": 22,
+          "slug": "22-the-brief",
+          "title": "El encargo",
+          "summary": "El trabajo que le entrega a una persona o a un agente vuelve como usted lo quería, y puede comprobarlo antes de que salga con su nombre."
+        },
+        {
+          "number": 23,
+          "slug": "23-on-the-page",
+          "title": "Por escrito",
+          "summary": "Sus mensajes, documentos, especificaciones y comentarios de revisión se leen y hacen que la gente actúe, porque las dos primeras líneas hacen el trabajo."
+        },
+        {
+          "number": 24,
+          "slug": "24-across-borders",
+          "title": "Entre fronteras",
+          "summary": "Trabaja bien con un cliente de otro país, otra zona horaria y otra lengua porque averigua cómo trabaja este equipo en lugar de adivinarlo."
+        }
+      ],
+      "machine": {
+        "slug": "24m-with-a-machine-in-the-room",
+        "title": "Con una máquina en la sala",
+        "summary": "Las salas, de la reunión al encargo, cuando un asistente o un agente es parte del trabajo. Después grabe otra vez."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Fricción",
+      "blurb": "Sostenga la conversación difícil, diga que no, maneje las conductas difíciles, discuta con honestidad, negocie acuerdos que duren y resista la presión.",
+      "art": "part-5-friction",
+      "chapters": [
+        {
+          "number": 25,
+          "slug": "25-the-hard-conversation",
+          "title": "La conversación difícil",
+          "summary": "Abre una conversación difícil con su tema y el resultado que usted quiere, da y recibe retroalimentación con evidencia, y se disculpa de modo que la otra persona le pueda creer."
+        },
+        {
+          "number": 26,
+          "slug": "26-saying-no-and-pushing-back",
+          "title": "Decir que no y poner límites",
+          "summary": "Puede decir que no, poner límites al alcance y a los plazos, disentir de alguien con más rango y después respaldar la decisión una vez tomada."
+        },
+        {
+          "number": 27,
+          "slug": "27-difficult-people",
+          "title": "Personas difíciles",
+          "summary": "Para cada conducta que puede ver, tiene las explicaciones inocentes, respuestas graduadas según el poder y según cuánto importa la relación, y un plan para cuando se repite."
+        },
+        {
+          "number": 28,
+          "slug": "28-arguing-well",
+          "title": "Discutir bien",
+          "summary": "Encuentra de qué trata en realidad un desacuerdo, lo discute con honestidad, concede solo lo justo y cambia de opinión en público."
+        },
+        {
+          "number": 29,
+          "slug": "29-negotiation",
+          "title": "Negociación",
+          "summary": "Se prepara en una página y llega a un acuerdo sobre alcance, plazo, precio, salario o participación accionaria que las dos partes van a cumplir."
+        },
+        {
+          "number": 30,
+          "slug": "30-pressure-and-how-to-resist-it",
+          "title": "La presión y cómo resistirla",
+          "summary": "Reconoce la presión que se ejerce sobre usted, de una persona o en un mensaje redactado por una máquina, porque decidió sus límites antes de la reunión."
+        }
+      ],
+      "machine": {
+        "slug": "30m-with-a-machine-in-the-room",
+        "title": "Con una máquina en la sala",
+        "summary": "Las conversaciones difíciles y la presión cuando un asistente o un agente es parte del trabajo. Después grabe otra vez."
+      }
+    },
+    {
+      "number": 6,
+      "title": "Lo que sigue siendo humano",
+      "blurb": "Quienes piensan, las startups y quienes resuelven problemas en la era de la IA: qué hábitos ganan valor a medida que las máquinas hacen más borradores, cómo está cambiando cada rol y qué hacer a continuación. Después el libro termina donde empezó: una persona, una segunda pregunta.",
+      "art": "part-6-what-stays-human",
+      "chapters": [
+        {
+          "number": 31,
+          "slug": "31-who-does-well-now",
+          "title": "A quién le va bien ahora",
+          "summary": "Puede nombrar los seis hábitos que este libro ha entrenado, oír cómo suena cada uno en una reunión y ver hacia cuál va creciendo usted."
+        },
+        {
+          "number": 32,
+          "slug": "32-seeing-the-system",
+          "title": "Ver el sistema",
+          "summary": "Antes de cambiar algo, puede rastrear sus efectos de segundo orden: el ciclo en el que está, la restricción que lo limita y quién lo siente después."
+        },
+        {
+          "number": 33,
+          "slug": "33-engineers-and-architects",
+          "title": "Ingeniería y arquitectura",
+          "summary": "Sabe cómo cambian las conversaciones de ingeniería y de arquitectura a medida que las máquinas hacen borradores de código, qué le sigue tocando juzgar a usted y tres pasos que vale la pena dar este mes."
+        },
+        {
+          "number": 34,
+          "slug": "34-data-scientists",
+          "title": "Ciencia de datos",
+          "summary": "Sabe cómo hablar por un resultado que no calculó a mano, y cómo están cambiando las conversaciones de la ciencia de datos."
+        },
+        {
+          "number": 35,
+          "slug": "35-product-managers-and-agile-leads",
+          "title": "Gerencia de producto y liderazgo ágil",
+          "summary": "Sabe cómo enmarcar el problema y conducir al equipo cuando cualquiera puede construir una primera versión en una tarde."
+        },
+        {
+          "number": 36,
+          "slug": "36-founders-and-the-ai-era-startup",
+          "title": "Fundadores y la startup en la era de la IA",
+          "summary": "Sabe qué conversaciones todavía tiene que sostener en persona quien funda una empresa cuando unas pocas personas y sus agentes hacen el trabajo de muchas, y cómo sostenerlas."
+        },
+        {
+          "number": 37,
+          "slug": "37-leading-when-nobody-knows-the-answer",
+          "title": "Liderar cuando nadie sabe la respuesta",
+          "summary": "Puede liderar con una dirección clara, una incógnita honesta, un responsable de la decisión con nombre y la siguiente prueba, y decir qué le haría cambiar de opinión."
+        },
+        {
+          "number": 38,
+          "slug": "38-still-human",
+          "title": "Todavía humanos",
+          "summary": "Una escena, la afirmación y su última grabación: la parte humana del trabajo, escrita como una descripción de puesto."
+        }
+      ]
+    }
+  ]
+}

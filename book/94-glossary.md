@@ -1,0 +1,48 @@
+# The book's tools
+
+The chapter in italics teaches the entry.
+
+- **Ask.** What you want from the listener, with a date if you have one. *Start here*.
+- **Baseline.** Sixty seconds on what you are working on and why it matters, recorded and compared only with your own next recording. *Start here*. Five checks:
+  - *Sentences before the point.* How many come before the first one that says why your work matters.
+  - *Hedges with no basis.* Every *probably*, *I think*, *should* or *hopefully* with nothing after it to say why.
+  - *One example.* One concrete case that shows why it matters; background does not count.
+  - *The ending.* An ask or a next step at the end.
+  - *Said back.* One listener hears it once and writes your point in one sentence.
+- **Basis words.** How you know a claim, strongest first. *How sure are you? Say that*.
+  - *Checked.* I ran it or read the record myself.
+  - *Told.* A person, a document or a machine told me.
+  - *Reasoned.* I worked it out from things checked or told.
+  - *Assumed.* I am taking it as given.
+- **Constraint.** The step that sets the pace of the whole. *Seeing the system*.
+- **Done means.** What somebody else could check once a practice is done.
+- **Grades.** How firm a forecast is. *Engineers and architects*.
+  - *Durable.* It held through earlier shifts and rests on more than testimony.
+  - *Reasonable bet.* Good reasoning, thin evidence.
+  - *Open.* Nobody knows yet; the cell says what to watch.
+- **Limit.** Where the claim stops, what has not been checked, and what would change it. *How sure are you? Say that*.
+- **Listener sketch.** Three lines about one named person, before one message: what they already know, have to decide and stand to lose. Check it with one question. *Who is listening*.
+- **Loop.** An effect that comes back to its own cause. A reinforcing loop feeds itself; a balancing loop pushes back. *Seeing the system*.
+- **Next-question order.** Start with the point sentence; after each sentence, answer what this listener would ask next; stop when the next question is theirs to ask. *Give it a shape*.
+- **Observable version.** For any label, what a recording would show or a number would state. *The exact word*.
+- **Point.** What this listener should believe or do. You have one when someone could say no to it. *Know what you think*.
+- **Point sentence.** One sentence, before any line that someone else will read: `[this listener] should [believe or do this], because [the one reason]`. *Know what you think*.
+- **Preparation sheet.** One page before any negotiation, ending on a test: will both sides still keep this once the work has started? *Negotiation*.
+- **Read-back.** What I understood, what I will do, what I am unsure of. *Listening people can feel*.
+- **Role-chapter labels.** What a statement rests on. *Engineers and architects*.
+  - *Reported.* People in the work say it, many of them selling the tools.
+  - *Checked.* A published finding stands behind it.
+  - *Our bet.* This book's reasoning.
+- **Said back.** See the baseline.
+- **Second-order effects.** What a change sets off after its first effect, often felt by people who weren't in the meeting. *Seeing the system*.
+- **Second-question test.** Five questions for any claim, yours, a colleague's or a machine's. *What is the point? What does it rest on? Where does it stop? What do you want from me? Who answers for it?* *Start here*; *How sure are you? Say that*.
+- **Sized claim.** The claim, its basis, its limit. *How sure are you? Say that*.
+- **Sort first.** Before you answer or argue, decide what kind it is, so you know what would settle it. A question is a fact, a judgment, a commitment or a challenge; a disagreement is about what is true, what to do or who gets something limited. *Thinking on your feet*; *Arguing well*.
+- **Thinker types.** Six habits, never personalities. *Who does well now*.
+  - *The framer* decides what the question is before anyone answers it.
+  - *The calibrator* says how sure we are, and tests a claim before the team acts on it.
+  - *The system reader* asks what a change sets off after its first effect, and who feels it next.
+  - *The strategist* chooses among paths when nobody knows the answer, and says what would change the choice.
+  - *The problem-solver* takes a mess with people in it to a decision that lasts.
+  - *The translator* carries meaning across a boundary intact.
+- **Working story.** Built backward from what the listener must decide: the decision, written first, never told first; one moment; the count; the handover. *Story for people who think in systems*.

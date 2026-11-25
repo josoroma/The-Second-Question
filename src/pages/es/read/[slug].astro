@@ -1,0 +1,13 @@
+---
+import ReadPage from "@/components/ReadPage.astro"
+import { pages } from "@/lib/chapters"
+
+export async function getStaticPaths() {
+  const entries = await pages("es")
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }))
+}
+
+const { entry } = Astro.props
+---
+
+<ReadPage entry={entry} lang="es" />

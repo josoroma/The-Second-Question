@@ -1,0 +1,78 @@
+---
+// The book's logo first, then "by" and the author's josoroma logo.
+// On narrow screens the header shows the book's mark instead of the full logo.
+import { homeHref } from "@/data/book"
+import { strings, type Lang } from "@/data/ui"
+
+interface Props {
+  size?: "sm" | "md" | "lg"
+  idSuffix?: string
+  class?: string
+  lang?: Lang
+}
+
+const { size = "md", idSuffix = "h", class: className, lang = "en" } = Astro.props
+const t = strings(lang)
+
+const brand = import.meta.glob("/src/assets/brand/*.svg", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+}) as Record<string, string>
+
+// Inline SVGs carry ids for their <title>/<desc>; make them unique per use.
+const unique = (svg: string | undefined, suffix = idSuffix) =>
+  svg
+    ?.replace(/(\s)id="([^"]+)"/g, `$1id="$2-${suffix}"`)
+    .replace(/(\s)aria-(labelledby|describedby)="([^"]+)"/g, (_m, space: string, attr: string, ids: string) =>
+      `${space}aria-${attr}="${ids
+        .split(/\s+/)
+        .map((id) => `${id}-${suffix}`)
+        .join(" ")}"`
+    )
+    .replace(/url\(#([^)]+)\)/g, `url(#$1-${suffix})`)
+    .replace(/(xlink:)?href="#([^"]+)"/g, (_m, x = "", id: string) => `${x}href="#${id}-${suffix}"`)
+
+const bookLogo = unique(brand["/src/assets/brand/the-second-question-logo.svg"])
+const bookMark = unique(brand["/src/assets/brand/the-second-question-mark.svg"], `${idSuffix}-mark`)
+const josoroma = unique(brand["/src/assets/brand/josoroma-logo.svg"])
+
+const sizes = {
+  // Footer
+  sm: { mark: false, book: "h-6", by: "text-xs", author: "h-[15px]", wrap: false },
+  // Header: mark only below 640px, full logo above
+  md: { mark: true, book: "h-7", by: "text-xs", author: "h-[15px] sm:h-[18px]", wrap: false },
+  // Hero: scales down and may wrap "by josoroma" onto a second line on phones
+  lg: { mark: false, book: "h-7 sm:h-10", by: "text-xs sm:text-sm", author: "h-[18px] sm:h-[26px]", wrap: true },
+}[size]
+---
+
+<div
+  class:list={[
+    "flex min-w-0 items-center gap-x-2.5",
+    sizes.wrap && "flex-wrap gap-y-2",
+    className,
+  ]}
+>
+  <a href={homeHref(lang)} class="flex min-w-0 shrink-0 items-center text-foreground" aria-label={t.home}>
+    {
+      bookLogo ? (
+        <>
+          {sizes.mark && bookMark && <span class="brand-svg block h-7 sm:hidden" set:html={bookMark} />}
+          <span class:list={["brand-svg", sizes.mark ? "hidden sm:block" : "block", sizes.book]} set:html={bookLogo} />
+        </>
+      ) : (
+        <span class="truncate font-semibold tracking-tight">The Second Question</span>
+      )
+    }
+  </a>
+  <span class="flex shrink-0 items-center gap-x-2.5">
+    <span class:list={["text-muted-foreground", sizes.by]}>{t.by}</span>
+    <a
+      href="https://github.com/josoroma"
+      class:list={["brand-svg block", sizes.author]}
+      aria-label="josoroma"
+      set:html={josoroma}
+    />
+  </span>
+</div>

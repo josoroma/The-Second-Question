@@ -1,0 +1,153 @@
+---
+import { render, type CollectionEntry } from "astro:content"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { ArrowLeft01Icon, ArrowRight01Icon, Github01Icon } from "@hugeicons/core-free-icons"
+
+import Figure from "@/components/Figure.astro"
+import Toc from "@/components/Toc.astro"
+import Layout from "@/layouts/main.astro"
+import { Badge } from "@/components/ui/badge"
+import { sourceHref } from "@/data/book"
+import { strings, type Lang } from "@/data/ui"
+import { readingMinutes, readingOrder } from "@/lib/chapters"
+
+interface Props {
+  entry: CollectionEntry<"chapters"> | CollectionEntry<"chaptersEs">
+  lang: Lang
+}
+
+const { entry, lang } = Astro.props
+const t = strings(lang)
+const { Content, headings } = await render(entry)
+
+const order = (await readingOrder(lang)).filter((item) => item.ready)
+const index = order.findIndex((item) => item.slug === entry.id)
+const meta = index >= 0 ? order[index] : undefined
+const previous = index > 0 ? order[index - 1] : undefined
+const next = index >= 0 && index < order.length - 1 ? order[index + 1] : undefined
+
+const fileTitle = headings.find((heading) => heading.depth === 1)?.text
+const title = meta?.title ?? fileTitle ?? entry.id
+const sections = headings.filter((heading) => heading.depth === 2)
+const minutes = readingMinutes(entry.body ?? "")
+
+const where = !meta
+  ? undefined
+  : meta.kind === "chapter"
+    ? `${t.part} ${meta.part?.number} · ${meta.part?.title} · ${t.chapter} ${meta.number}`
+    : meta.kind === "machine"
+      ? `${t.part} ${meta.part?.number} · ${meta.part?.title} · ${t.closing}`
+      : meta.kind === "front"
+        ? t.front
+        : t.back
+
+// The chapter's own figure, else its part's. Front and back matter have none.
+const figureSlugs = [meta?.part && entry.id, meta?.part?.art].filter(Boolean) as string[]
+const plateNumber = meta?.kind === "chapter" && meta.number ? String(meta.number).padStart(2, "0") : undefined
+const readMarkdown = meta?.kind === "chapter" ? t.readMarkdownChapter : t.readMarkdownPage
+---
+
+<Layout title={title} description={meta?.summary} current={entry.id} lang={lang}>
+  <div class="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)] gap-10 px-4 sm:px-6 lg:grid-cols-[15rem_minmax(0,1fr)] xl:grid-cols-[15rem_minmax(0,1fr)_13rem]">
+    <aside class="hidden lg:block">
+      <div class="sticky top-14 -mx-2 max-h-[calc(100svh-3.5rem)] overflow-y-auto py-10 pr-2">
+        <Toc current={entry.id} lang={lang} />
+      </div>
+    </aside>
+
+    <div class="min-w-0 py-10 lg:py-14">
+      <header class="flex max-w-[68ch] flex-col gap-4">
+        <p class="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground">
+          {where && <span>{where}</span>}
+          {where && <span aria-hidden="true">·</span>}
+          <span>{minutes} {t.minRead}</span>
+          {
+            meta?.preview && (
+              <Badge variant="secondary" className="ml-1">
+                {t.previewLong}
+              </Badge>
+            )
+          }
+        </p>
+        <h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">{title}</h1>
+        {meta?.summary && <p class="text-lg leading-relaxed text-muted-foreground">{meta.summary}</p>}
+      </header>
+
+      {
+        figureSlugs.length > 0 && (
+          <div class="mt-10 max-w-[68ch]">
+            <Figure slugs={figureSlugs} controls number={plateNumber} plate={title} lang={lang} />
+          </div>
+        )
+      }
+
+      <article class="book-prose mt-12">
+        <Content />
+      </article>
+
+      <div class="mt-16 flex max-w-[68ch] flex-col gap-6">
+        <a
+          href={sourceHref(entry.id, lang)}
+          class="inline-flex w-fit items-center gap-2 text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+        >
+          <HugeiconsIcon icon={Github01Icon} strokeWidth={2} className="size-4" />
+          {readMarkdown}
+        </a>
+        <nav class="grid gap-3 sm:grid-cols-2" aria-label={t.pageNav}>
+          {
+            previous ? (
+              <a
+                href={previous.href}
+                class="group flex flex-col gap-1 rounded-3xl border border-border/70 p-5 transition-colors hover:bg-muted/60"
+              >
+                <span class="flex items-center gap-1 text-xs text-muted-foreground">
+                  <HugeiconsIcon icon={ArrowLeft01Icon} strokeWidth={2} className="size-3.5" />
+                  {t.previous}
+                </span>
+                <span class="font-medium">{previous.title}</span>
+              </a>
+            ) : (
+              <span />
+            )
+          }
+          {
+            next && (
+              <a
+                href={next.href}
+                class="group flex flex-col items-end gap-1 rounded-3xl border border-border/70 p-5 text-right transition-colors hover:bg-muted/60"
+              >
+                <span class="flex items-center gap-1 text-xs text-muted-foreground">
+                  {t.next}
+                  <HugeiconsIcon icon={ArrowRight01Icon} strokeWidth={2} className="size-3.5" />
+                </span>
+                <span class="font-medium">{next.title}</span>
+              </a>
+            )
+          }
+        </nav>
+      </div>
+    </div>
+
+    <aside class="hidden xl:block">
+      {
+        sections.length > 0 && (
+          <div class="sticky top-14 py-14">
+            <p class="text-[0.7rem] font-medium tracking-wider text-muted-foreground uppercase">{t.onThisPage}</p>
+            <ul class="mt-3 flex flex-col gap-2 text-sm">
+              {sections.map((section) => (
+                <li>
+                  <a
+                    href={`#${section.slug}`}
+                    class="block leading-snug text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {section.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </aside>
+  </div>
+</Layout>

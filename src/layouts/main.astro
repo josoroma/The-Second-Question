@@ -1,0 +1,76 @@
+---
+import "@/styles/global.css"
+
+import SiteFooter from "@/components/SiteFooter.astro"
+import SiteHeader from "@/components/SiteHeader.astro"
+import { bookFor, chapterHref, homeHref, withBase } from "@/data/book"
+import { strings, type Lang } from "@/data/ui"
+import { siteStyle } from "@/lib/iso/style.js"
+
+// The figures' tokens and classes (art/SKILL.md): light on .iso, dark under .dark.
+const isoStyle = siteStyle()
+
+interface Props {
+  title?: string
+  description?: string
+  current?: string
+  lang?: Lang
+}
+
+const { title, current, lang = "en" } = Astro.props
+const t = strings(lang)
+const book = bookFor(lang)
+const { description = book.pitch } = Astro.props
+const fullTitle = title ? `${title} · ${book.title}` : `${book.title}: ${book.subtitle}`
+const canonical = new URL(Astro.url.pathname, Astro.site)
+// The same page in both languages, for the switch and for search engines.
+const hrefIn = (to: Lang) => (current ? chapterHref(current, to) : homeHref(to))
+const alternate = (to: Lang) => new URL(hrefIn(to), Astro.site)
+const other: Lang = lang === "es" ? "en" : "es"
+---
+
+<!doctype html>
+<html lang={t.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="josoroma" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={alternate("en")} />
+    <link rel="alternate" hreflang="es" href={alternate("es")} />
+    <link rel="alternate" hreflang="x-default" href={alternate("en")} />
+    <link rel="icon" type="image/svg+xml" href={withBase("favicon.svg")} />
+    <meta property="og:type" content="book" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === "es" ? "es_CR" : "en_US"} />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)" />
+    <style is:inline set:html={isoStyle}></style>
+    <script is:inline>
+      ;(() => {
+        try {
+          const saved = localStorage.getItem("theme")
+          const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches
+          document.documentElement.classList.toggle("dark", dark)
+          document.documentElement.style.colorScheme = dark ? "dark" : "light"
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body class="min-h-svh bg-background text-foreground antialiased">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-4xl bg-primary px-4 py-2 text-primary-foreground focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >{t.skip}</a
+    >
+    <SiteHeader current={current} lang={lang} otherHref={hrefIn(other)} />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter lang={lang} />
+  </body>
+</html>

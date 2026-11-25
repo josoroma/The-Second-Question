@@ -1,0 +1,40 @@
+---
+// Development only: a figure in 2D and in 3D from three sides, for checks
+// (scripts/look3d.mjs). No pages are built for production.
+import Layout from "@/layouts/main.astro"
+import Figure from "@/components/Figure.astro"
+
+export function getStaticPaths() {
+  if (import.meta.env.PROD) return []
+  const figs = import.meta.glob("/src/figures/*.js", { eager: true })
+  return Object.keys(figs).map((path) => ({ params: { slug: path.split("/").pop()!.replace(/\.js$/, "") } }))
+}
+
+const { slug } = Astro.params
+---
+
+<Layout title={`Lab: ${slug}`}>
+  <div class="mx-auto grid max-w-6xl gap-6 px-4 py-8 sm:grid-cols-2">
+    <Figure slugs={[slug]} controls />
+    {
+      [0, 55, 140].map((az) => (
+        <div class="iso-figure">
+          <div class="iso-stage iso lab3d" data-slug={slug} data-az={az} />
+          <p class="iso-bar">3D · turned {az}°</p>
+        </div>
+      ))
+    }
+  </div>
+</Layout>
+
+<script>
+  import { runtime } from "@/lib/iso/runtime.js"
+  const modules = import.meta.glob("/src/figures/*.js")
+  for (const el of document.querySelectorAll<HTMLElement>(".lab3d")) {
+    const load = modules[`/src/figures/${el.dataset.slug}.js`]
+    if (!load) continue
+    Promise.all([load(), import("@/lib/iso/webgl.js")]).then(([m, gl]) => {
+      gl.mount3D(el, (m as any).default, { runtime: runtime(), azimuth: Number(el.dataset.az), elevation: Number(el.dataset.az) ? 8 : 0 })
+    })
+  }
+</script>

@@ -1,0 +1,192 @@
+---
+import { HugeiconsIcon } from "@hugeicons/react"
+import { ArrowRight02Icon, Github01Icon } from "@hugeicons/core-free-icons"
+
+import Figure from "@/components/Figure.astro"
+import BrandLockup from "@/components/BrandLockup.astro"
+import Layout from "@/layouts/main.astro"
+import { Badge } from "@/components/ui/badge"
+import { buttonVariants } from "@/components/ui/button"
+import { bookFor, chaptersFor, homeHref, partsFor } from "@/data/book"
+import { strings, type Lang } from "@/data/ui"
+import { readingOrder } from "@/lib/chapters"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = strings(lang)
+const book = bookFor(lang)
+const parts = partsFor(lang)
+const other: Lang = lang === "es" ? "en" : "es"
+
+const order = await readingOrder(lang)
+const first = order.find((entry) => entry.ready)
+const readyChapters = order.filter((entry) => entry.kind === "chapter" && entry.ready)
+const online = readyChapters.filter((entry) => !entry.preview).length
+const front = order.filter((entry) => entry.kind === "front")
+const back = order.filter((entry) => entry.kind === "back")
+const partEntries = (number: number) => order.filter((entry) => entry.part?.number === number)
+---
+
+<Layout lang={lang}>
+  <section class="relative overflow-hidden">
+    <div class="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)] items-center gap-12 px-4 pt-14 pb-16 sm:px-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-16 lg:pt-24 lg:pb-24">
+      <div class="flex flex-col gap-7">
+        <Badge variant="outline" className="h-6 px-3 text-muted-foreground">
+          {t.badge(online, chaptersFor(lang).length)}
+        </Badge>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-5xl font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">
+            {book.title}
+          </h1>
+          <p class="max-w-xl text-xl leading-snug text-balance text-muted-foreground sm:text-2xl">
+            {book.subtitle}
+          </p>
+        </div>
+        <p class="max-w-xl text-base leading-relaxed text-foreground/85 sm:text-lg">{book.pitch}</p>
+        <div class="flex flex-wrap items-center gap-3">
+          {
+            first && (
+              <a href={first.href} class={buttonVariants({ size: "lg" })}>
+                {t.startReading}
+                <HugeiconsIcon icon={ArrowRight02Icon} strokeWidth={2} data-icon="inline-end" />
+              </a>
+            )
+          }
+          <a
+            href={homeHref(other)}
+            hreflang={other}
+            lang={other}
+            class={buttonVariants({ size: "lg", variant: "outline" })}
+          >
+            {t.otherLang}
+          </a>
+          <a href={book.repo} class={buttonVariants({ size: "lg", variant: "outline" })}>
+            <HugeiconsIcon icon={Github01Icon} strokeWidth={2} data-icon="inline-start" />
+            {t.readMarkdown}
+          </a>
+        </div>
+        <BrandLockup lang={lang} size="lg" idSuffix="hero" class="pt-2" />
+      </div>
+      <div class="relative">
+        <Figure slugs={["cover"]} mode="3d" controls plate={t.heroPlate} lang={lang} class="iso-hero" />
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-border/70 bg-muted/40 dark:bg-muted/20">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
+      <h2 class="max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+        {t.promiseHeading}
+      </h2>
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          t.promises.map((item) => (
+            <div class="rounded-3xl border border-border/70 bg-background p-6">
+              <h3 class="font-medium">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="contents" class="mx-auto max-w-7xl scroll-mt-20 px-4 pt-20 sm:px-6">
+    <div class="flex flex-col gap-3">
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">{t.contents}</h2>
+      <p class="max-w-2xl text-muted-foreground">
+        {t.contentsIntro}
+      </p>
+    </div>
+
+    {
+      front.length > 0 && (
+        <ul class="mt-10 flex max-w-3xl flex-col divide-y divide-border/70 border-y border-border/70">
+          {front.map((entry) => (
+            <li>
+              <a href={entry.href} class="group flex items-center gap-4 px-2 py-3 transition-colors hover:bg-muted/60 sm:px-3">
+                <span class="flex-1 font-medium">{entry.title}</span>
+                <HugeiconsIcon icon={ArrowRight02Icon} strokeWidth={2} className="size-4 shrink-0 text-muted-foreground" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <div class="mt-12 flex flex-col gap-20">
+      {
+        parts.map((part) => (
+          <article class="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,26rem)_1fr] lg:gap-12 xl:grid-cols-[minmax(0,30rem)_1fr] xl:gap-16">
+            <div class="flex flex-col gap-5 lg:sticky lg:top-24 lg:self-start">
+              <Figure slugs={[part.art, "cover"]} idSuffix={`part-${part.number}`} plate={`${t.part} ${part.number}`} lang={lang} />
+              <div>
+                <p class="text-sm font-medium text-muted-foreground">{t.part} {part.number}</p>
+                <h3 class="mt-1 text-2xl font-semibold tracking-tight">{part.title}</h3>
+                <p class="mt-2 leading-relaxed text-muted-foreground">{part.blurb}</p>
+              </div>
+            </div>
+            <ol class="flex flex-col divide-y divide-border/70 border-y border-border/70">
+              {partEntries(part.number).map((entry) => {
+                const inner = (
+                  <>
+                    <span class="w-8 shrink-0 pt-0.5 text-right text-sm text-muted-foreground tabular-nums">
+                      {entry.number ?? ""}
+                    </span>
+                    <span class="flex min-w-0 flex-1 flex-col gap-1">
+                      <span class:list={["font-medium", entry.kind === "machine" && "italic"]}>{entry.title}</span>
+                      <span class="text-sm leading-relaxed text-muted-foreground">{entry.summary}</span>
+                    </span>
+                    {entry.ready ? (
+                      <span class="mt-0.5 flex shrink-0 items-center gap-2">
+                        {entry.preview && <Badge variant="outline">{t.preview}</Badge>}
+                        <HugeiconsIcon
+                          icon={ArrowRight02Icon}
+                          strokeWidth={2}
+                          className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-foreground"
+                        />
+                      </span>
+                    ) : (
+                      <Badge variant="secondary" className="mt-0.5 shrink-0">
+                        {t.inDraft}
+                      </Badge>
+                    )}
+                  </>
+                )
+                return (
+                  <li class:list={[entry.kind === "machine" && "bg-muted/30"]}>
+                    {entry.ready ? (
+                      <a href={entry.href} class="group flex gap-4 px-2 py-4 transition-colors hover:bg-muted/60 sm:px-3">
+                        {inner}
+                      </a>
+                    ) : (
+                      <div class="flex gap-4 px-2 py-4 opacity-75 sm:px-3">{inner}</div>
+                    )}
+                  </li>
+                )
+              })}
+            </ol>
+          </article>
+        ))
+      }
+    </div>
+
+    {
+      back.length > 0 && (
+        <ul class="mt-20 flex max-w-3xl flex-col divide-y divide-border/70 border-y border-border/70">
+          {back.map((entry) => (
+            <li>
+              <a href={entry.href} class="group flex items-center gap-4 px-2 py-3 transition-colors hover:bg-muted/60 sm:px-3">
+                <span class="flex-1 font-medium">{entry.title}</span>
+                <HugeiconsIcon icon={ArrowRight02Icon} strokeWidth={2} className="size-4 shrink-0 text-muted-foreground" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+</Layout>

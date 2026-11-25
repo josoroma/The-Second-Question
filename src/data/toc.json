@@ -1,0 +1,305 @@
+{
+  "parts": [
+    {
+      "number": 1,
+      "title": "Clear head",
+      "blurb": "Find the point before you speak, know who it is for, give it a shape, choose the exact word, and say how sure you are.",
+      "art": "part-1-clear-head",
+      "chapters": [
+        {
+          "number": 1,
+          "slug": "01-start-here",
+          "title": "Start here",
+          "summary": "In ten minutes you hear what one move does to sixty seconds of your own speech, and you see why that move is worth more now that machines write the first draft."
+        },
+        {
+          "number": 2,
+          "slug": "02-know-what-you-think",
+          "title": "Know what you think",
+          "summary": "You find your point before the meeting, by writing or by talking it through, and you test it before anyone else does."
+        },
+        {
+          "number": 3,
+          "slug": "03-who-is-listening",
+          "title": "Who is listening",
+          "summary": "In two minutes you sketch the one person you must reach, what they know, must decide and stand to lose, and you stop explaining to the wrong audience."
+        },
+        {
+          "number": 4,
+          "slug": "04-give-it-a-shape",
+          "title": "Give it a shape",
+          "summary": "Your answers, explanations and updates are easy to follow because each sentence answers the question the last one raised."
+        },
+        {
+          "number": 5,
+          "slug": "05-the-exact-word",
+          "title": "The exact word",
+          "summary": "You replace the labels that cause most misunderstandings at work with what someone would see, hear or count, in your first language or your second."
+        },
+        {
+          "number": 6,
+          "slug": "06-how-sure-are-you",
+          "title": "How sure are you? Say that",
+          "summary": "You state any claim, estimate or “I don’t know” at the size your evidence supports, and you test a colleague’s claim or a machine’s the same way."
+        }
+      ],
+      "machine": {
+        "slug": "06m-with-a-machine-in-the-room",
+        "title": "With a machine in the room",
+        "summary": "Finding the point and sizing a claim when an assistant or agent is part of the work. Then record your sixty seconds again."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Clear voice",
+      "blurb": "Say less, be easy to hear, use voice, body and camera on purpose, stay steady under pressure and think on your feet.",
+      "art": "part-2-clear-voice",
+      "chapters": [
+        {
+          "number": 7,
+          "slug": "07-say-less",
+          "title": "Say less",
+          "summary": "You stop when the point is made: no apology in front, no third explanation, and a pause you chose."
+        },
+        {
+          "number": 8,
+          "slug": "08-easy-to-hear",
+          "title": "Easy to hear",
+          "summary": "Five minutes a day makes you easier to understand on a call, with the accent you have."
+        },
+        {
+          "number": 9,
+          "slug": "09-voice-body-and-camera",
+          "title": "Voice, body and camera",
+          "summary": "You know what your voice, face and camera do in a room and on a call, and how little one signal from someone else can tell you."
+        },
+        {
+          "number": 10,
+          "slug": "10-steady-under-pressure",
+          "title": "Steady under pressure",
+          "summary": "You have a routine for the ten minutes before a hard moment and a way back when you lose the thread."
+        },
+        {
+          "number": 11,
+          "slug": "11-thinking-on-your-feet",
+          "title": "Thinking on your feet",
+          "summary": "You buy two seconds, sort the question, and answer the one that was asked, including the hostile one and the interruption."
+        }
+      ],
+      "machine": {
+        "slug": "11m-with-a-machine-in-the-room",
+        "title": "With a machine in the room",
+        "summary": "Saying less and staying steady when an assistant or agent is part of the work. Then record again."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Clear connection",
+      "blurb": "Make people feel heard, turn small talk into real talk, and carry one point in a story.",
+      "art": "part-3-clear-connection",
+      "chapters": [
+        {
+          "number": 12,
+          "slug": "12-listening-people-can-feel",
+          "title": "Listening people can feel",
+          "summary": "The other person knows they were heard, because you said it back and they corrected you."
+        },
+        {
+          "number": 13,
+          "slug": "13-questions-and-common-ground",
+          "title": "Questions and common ground",
+          "summary": "You can start a real conversation with a stranger, a client or an executive, find what you share, and leave it well."
+        },
+        {
+          "number": 14,
+          "slug": "14-story-for-people-who-think-in-systems",
+          "title": "Story for people who think in systems",
+          "summary": "You carry one point in a ninety-second story built from a real moment and the count that shows it is not a one-off, and you know when a story is the wrong answer."
+        }
+      ],
+      "machine": {
+        "slug": "14m-with-a-machine-in-the-room",
+        "title": "With a machine in the room",
+        "summary": "Listening, questions and story when an assistant or agent is part of the work. Then record again."
+      }
+    },
+    {
+      "number": 4,
+      "title": "The rooms",
+      "blurb": "Take the tools into the meeting, the explanation, the update, the presentation, the demo, the pitch, the sale, the brief, the page and the call across borders.",
+      "art": "part-4-the-rooms",
+      "chapters": [
+        {
+          "number": 15,
+          "slug": "15-the-meeting",
+          "title": "The meeting",
+          "summary": "You get the floor, steer to a decision and leave with an owner and a date, in stand-ups, planning, reviews and retrospectives."
+        },
+        {
+          "number": 16,
+          "slug": "16-the-explanation",
+          "title": "The explanation",
+          "summary": "A person who must decide can follow your trade-off, your architecture or your uncertainty without your background."
+        },
+        {
+          "number": 17,
+          "slug": "17-the-update",
+          "title": "The update",
+          "summary": "Your status, bad news and escalation arrive answer first, with a date that says what it depends on, and your investor hears it from you first."
+        },
+        {
+          "number": 18,
+          "slug": "18-the-presentation",
+          "title": "The presentation",
+          "summary": "Your talk opens with something worth hearing, keeps people through the middle, closes on a clear ask and survives the questions, in the room or on a screen."
+        },
+        {
+          "number": 19,
+          "slug": "19-the-demo",
+          "title": "The demo",
+          "summary": "People see the value in the first two minutes, and when the demo breaks live you know what to say next."
+        },
+        {
+          "number": 20,
+          "slug": "20-the-pitch",
+          "title": "The pitch",
+          "summary": "You can say what your company or project does in one sentence, and fit it to an investor, a person you want to hire and a budget holder inside the company."
+        },
+        {
+          "number": 21,
+          "slug": "21-the-sale",
+          "title": "The sale",
+          "summary": "You can run a discovery call, write a proposal the buyer can check, meet the objection and say the price without flinching or apologizing."
+        },
+        {
+          "number": 22,
+          "slug": "22-the-brief",
+          "title": "The brief",
+          "summary": "Work you hand to a person or an agent comes back as you meant it, and you can check it before it goes out under your name."
+        },
+        {
+          "number": 23,
+          "slug": "23-on-the-page",
+          "title": "On the page",
+          "summary": "Your messages, documents, specs and review comments get read and acted on, because the first two lines do the work."
+        },
+        {
+          "number": 24,
+          "slug": "24-across-borders",
+          "title": "Across borders",
+          "summary": "You work well with a client in another country, time zone and language by finding out how this team works instead of guessing."
+        }
+      ],
+      "machine": {
+        "slug": "24m-with-a-machine-in-the-room",
+        "title": "With a machine in the room",
+        "summary": "The rooms, from the meeting to the brief, when an assistant or agent is part of the work. Then record again."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Friction",
+      "blurb": "Hold the hard conversation, say no, handle difficult behavior, argue honestly, negotiate agreements that last and resist pressure.",
+      "art": "part-5-friction",
+      "chapters": [
+        {
+          "number": 25,
+          "slug": "25-the-hard-conversation",
+          "title": "The hard conversation",
+          "summary": "You open a hard conversation with its subject and the outcome you want, give and take feedback with evidence, and apologize so the other person can believe you."
+        },
+        {
+          "number": 26,
+          "slug": "26-saying-no-and-pushing-back",
+          "title": "Saying no and pushing back",
+          "summary": "You can decline, push back on scope and deadlines, disagree with someone senior, and then back the decision once it is made."
+        },
+        {
+          "number": 27,
+          "slug": "27-difficult-people",
+          "title": "Difficult people",
+          "summary": "For each behavior you can see, you have the innocent explanations, responses graded by power and by how much the relationship matters, and a plan for when it repeats."
+        },
+        {
+          "number": 28,
+          "slug": "28-arguing-well",
+          "title": "Arguing well",
+          "summary": "You find what a disagreement is really about, argue it honestly, concede narrowly and change your mind in public."
+        },
+        {
+          "number": 29,
+          "slug": "29-negotiation",
+          "title": "Negotiation",
+          "summary": "You prepare on one page and reach an agreement on scope, deadline, price, salary or equity that both sides will keep."
+        },
+        {
+          "number": 30,
+          "slug": "30-pressure-and-how-to-resist-it",
+          "title": "Pressure and how to resist it",
+          "summary": "You recognize pressure used on you, by a person or in a machine-drafted message, because you decided your limits before the meeting."
+        }
+      ],
+      "machine": {
+        "slug": "30m-with-a-machine-in-the-room",
+        "title": "With a machine in the room",
+        "summary": "Hard conversations and pressure when an assistant or agent is part of the work. Then record again."
+      }
+    },
+    {
+      "number": 6,
+      "title": "What stays human",
+      "blurb": "The thinkers, startups and problem-solvers of the AI era: which habits gain value as machines draft more, how each role is changing, and what to do next. Then the book ends where it began: one person, one second question.",
+      "art": "part-6-what-stays-human",
+      "chapters": [
+        {
+          "number": 31,
+          "slug": "31-who-does-well-now",
+          "title": "Who does well now",
+          "summary": "You can name the six habits this book has trained, hear how each sounds in a meeting, and see which one you are growing into."
+        },
+        {
+          "number": 32,
+          "slug": "32-seeing-the-system",
+          "title": "Seeing the system",
+          "summary": "Before you change something, you can trace its second-order effects: the loop it sits in, the constraint that limits it and who feels it next."
+        },
+        {
+          "number": 33,
+          "slug": "33-engineers-and-architects",
+          "title": "Engineers and architects",
+          "summary": "You know how an engineer’s and an architect’s conversations change as machines draft code, what stays yours to judge, and three moves worth making this month."
+        },
+        {
+          "number": 34,
+          "slug": "34-data-scientists",
+          "title": "Data scientists",
+          "summary": "You know how to speak for a result you did not compute by hand, and how a data scientist’s conversations are changing."
+        },
+        {
+          "number": 35,
+          "slug": "35-product-managers-and-agile-leads",
+          "title": "Product managers and agile leads",
+          "summary": "You know how to frame the problem and run the team when anyone can build a first version in an afternoon."
+        },
+        {
+          "number": 36,
+          "slug": "36-founders-and-the-ai-era-startup",
+          "title": "Founders and the AI-era startup",
+          "summary": "You know which conversations a founder still has to hold in person when a few people and their agents do the work of many, and how to hold them."
+        },
+        {
+          "number": 37,
+          "slug": "37-leading-when-nobody-knows-the-answer",
+          "title": "Leading when nobody knows the answer",
+          "summary": "You can lead with a clear direction, an honest unknown, a named decision owner and the next test, and say what would change your mind."
+        },
+        {
+          "number": 38,
+          "slug": "38-still-human",
+          "title": "Still human",
+          "summary": "One scene, the claim, and your last recording: the human part of the work written as a job description."
+        }
+      ]
+    }
+  ]
+}

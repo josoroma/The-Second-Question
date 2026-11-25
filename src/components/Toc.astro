@@ -1,0 +1,57 @@
+---
+import { strings, type Lang } from "@/data/ui"
+import { navGroups } from "@/lib/chapters"
+
+interface Props {
+  current?: string
+  lang: Lang
+}
+
+const { current, lang } = Astro.props
+const t = strings(lang)
+const groups = await navGroups(lang)
+---
+
+<nav aria-label={t.contents} class="flex flex-col gap-6 text-sm">
+  {
+    groups.map((group) => (
+      <div class="flex flex-col gap-1">
+        <p class="px-2 text-[0.7rem] font-medium tracking-wider text-muted-foreground uppercase">{group.label}</p>
+        <ul class="flex flex-col">
+          {group.entries.map((entry) => {
+            const inner = (
+              <>
+                <span class="w-5 shrink-0 text-right text-muted-foreground tabular-nums">{entry.number ?? ""}</span>
+                <span class:list={[entry.kind === "machine" && "italic"]}>
+                  {entry.title}
+                  {entry.preview && (
+                    <span class="ml-1.5 text-[0.65rem] font-medium tracking-wide text-muted-foreground uppercase not-italic">
+                      {t.preview}
+                    </span>
+                  )}
+                </span>
+              </>
+            )
+            return (
+              <li>
+                {entry.ready ? (
+                  <a
+                    href={entry.href}
+                    aria-current={entry.slug === current ? "page" : undefined}
+                    class="flex gap-2.5 rounded-lg px-2 py-1 leading-snug text-foreground/85 transition-colors hover:bg-muted hover:text-foreground aria-[current=page]:bg-secondary aria-[current=page]:font-medium aria-[current=page]:text-foreground"
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <span class="flex gap-2.5 px-2 py-1 leading-snug text-muted-foreground/60" title={t.inDraft}>
+                    {inner}
+                  </span>
+                )}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    ))
+  }
+</nav>
